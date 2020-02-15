@@ -25,7 +25,7 @@ SECRET_KEY = '8dj9yj1n$i8qyw2o9_ds=!^ws902w8lpi4@9izu4&hk2t2a+64'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://mlengineerassigment-env.nmpv9pibcj.eu-central-1.elasticbeanstalk.com']
 
 
 # Application definition
