@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'models',
+    'ml_model',
 ]
 
 MIDDLEWARE = [
