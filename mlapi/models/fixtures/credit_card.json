@@ -1,0 +1,23 @@
+[
+  {
+    "model": "models.CreditCard",
+    "pk": -1,
+    "fields": {
+      "type": "Unknown"
+    }
+  },
+  {
+    "model": "models.CreditCard",
+    "pk": 1,
+    "fields": {
+      "type": "prepaid"
+    }
+  },
+  {
+    "model": "models.CreditCard",
+    "pk": 2,
+    "fields": {
+      "type": "standard"
+    }
+  }
+]

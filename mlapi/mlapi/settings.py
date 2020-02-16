@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'models',
     'ml_model',
+    'predict',
 ]
 
 MIDDLEWARE = [

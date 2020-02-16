@@ -1,0 +1,142 @@
+[
+  {
+    "model": "models.Country",
+    "pk": -1,
+    "fields": {
+      "code": "Unknown"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 1,
+    "fields": {
+      "code": "AU"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 2,
+    "fields": {
+      "code": "CL"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 3,
+    "fields": {
+      "code": "EC"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 4,
+    "fields": {
+      "code": "GB"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 5,
+    "fields": {
+      "code": "ID"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 6,
+    "fields": {
+      "code": "IL"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 7,
+    "fields": {
+      "code": "IN"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 8,
+    "fields": {
+      "code": "KZ"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 9,
+    "fields": {
+      "code": "MY"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 10,
+    "fields": {
+      "code": "NG"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 11,
+    "fields": {
+      "code": "NZ"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 12,
+    "fields": {
+      "code": "RU"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 13,
+    "fields": {
+      "code": "SA"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 14,
+    "fields": {
+      "code": "SG"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 15,
+    "fields": {
+      "code": "TH"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 16,
+    "fields": {
+      "code": "TR"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 17,
+    "fields": {
+      "code": "UA"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 18,
+    "fields": {
+      "code": "US"
+    }
+  },
+  {
+    "model": "models.Country",
+    "pk": 19,
+    "fields": {
+      "code": "ZA"
+    }
+  }
+]

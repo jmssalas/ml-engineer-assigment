@@ -1,0 +1,30 @@
+[
+  {
+    "model": "models.AffType",
+    "pk": -1,
+    "fields": {
+      "type": "Unknown"
+    }
+  },
+  {
+    "model": "models.AffType",
+    "pk": 1,
+    "fields": {
+      "type": "Other"
+    }
+  },
+  {
+    "model": "models.AffType",
+    "pk": 2,
+    "fields": {
+      "type": "PPL"
+    }
+  },
+  {
+    "model": "models.AffType",
+    "pk": 3,
+    "fields": {
+      "type": "PPS"
+    }
+  }
+]
