@@ -16,16 +16,23 @@ class PredictView(APIView):
         features_serializer = serializers.FeatureSerializer(data=request.data, many=True)
 
         if features_serializer.is_valid():
+            print('Saving JSON features...')
             features_objects = features_serializer.save()
+
+            print('Converting features to DataFrame...')
             features_df = to_dataframe(features_serializer.data)
 
+            print('Preprocessing features...')
             preprocessed = preprocessing(features_df)
+
+            print('Making predictions...')
             predictions = settings.ML_MODEL.predict(preprocessed[settings.FEATURES_COLUMNS])
 
+            print('Saving predictions...')
             for feature, pred in zip(features_objects, predictions):
                 prediction = models.Prediction(prediction=pred, feature=feature)
                 prediction.save()
-
+            print('Prediction saved')
             return Response(predictions)
 
         else:
@@ -63,9 +70,9 @@ def preprocessing(data):
         preprocessed[number_column] = preprocessed[number_column].apply(
             lambda x: settings.NULL_NUMBER_VALUE if pd.isna(x) else x)
 
-    preprocessed[settings.CREDIT_CARD_COLUMN] = data[settings.CREDIT_CARD_COLUMN].apply(get_credit_card_id)
-    preprocessed[settings.AFF_TYPE_COLUMN] = data[settings.AFF_TYPE_COLUMN].apply(get_aff_type_id)
-    preprocessed[settings.COUNTRY_SEGMENT_COLUMN] = data[settings.COUNTRY_SEGMENT_COLUMN].apply(get_country_id)
+    preprocessed[settings.CREDIT_CARD_COLUMN] = preprocessed[settings.CREDIT_CARD_COLUMN].apply(get_credit_card_id)
+    preprocessed[settings.AFF_TYPE_COLUMN] = preprocessed[settings.AFF_TYPE_COLUMN].apply(get_aff_type_id)
+    preprocessed[settings.COUNTRY_SEGMENT_COLUMN] = preprocessed[settings.COUNTRY_SEGMENT_COLUMN].apply(get_country_id)
 
     return preprocessed
 
@@ -83,4 +90,3 @@ def get_aff_type_id(aff_type):
 def get_country_id(country_segment):
     obj, _ = models.Country.objects.get_or_create(code=country_segment)
     return obj.id
-
