@@ -11,14 +11,12 @@ LOCAL_SERVER_URL = 'http://127.0.0.1:8000/api/v1/predict'
 EXTERNAL_SERVER_URL = 'http://mlengineerassigment-env.eu-central-1.elasticbeanstalk.com/api/v1/predict'
 
 # Change to True to execute the script in the online server
-EXTERNAL = False
+EXTERNAL = True
 
 DATA_PATH = '../data'
 TRAIN_PATH = os.path.join(DATA_PATH, 'train.csv')
 VALID_PATH = os.path.join(DATA_PATH, 'valid.csv')
 TEST_PATH = os.path.join(DATA_PATH, 'test.csv')
-
-DATE_COLUMNS = ['join_date']
 
 BLOCK_SIZE = 1000
 
